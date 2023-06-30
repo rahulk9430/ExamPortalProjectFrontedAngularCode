@@ -1,0 +1,36 @@
+
+<mat-card>
+    <h3 class="text-center">Your Profile Details </h3>
+
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container">
+                <div class="container text-center">
+                    <img src="../../../assets/logo.png"  alt=""
+                    class="profile-image"
+                    >
+                   <h1 class="mt15"> {{this.loginService.getUser().firstName}}</h1>
+                    
+                </div>
+                <div class="row">
+                    
+                    <div class="cod-md-10 offset-md-1">
+                        
+                        <mat-list>
+                            <mat-list-item>Username:- {{element.username}}</mat-list-item>
+                            <mat-list-item>Name:- {{element.firstName}} {{element.lastName}} </mat-list-item>
+                            <mat-list-item>Email :- {{element.email}}</mat-list-item>
+                            <mat-list-item>Phone :- {{element.phone}}</mat-list-item>
+                            <mat-list-item>Role :- {{element.authorities[0].authority}}</mat-list-item>
+                            <mat-list-item>Status :- {{element.enabled===true ? 'ACTIVE': (element.enabled===false ? 'DISABLED': '')}}</mat-list-item>
+                        </mat-list> 
+                          
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
